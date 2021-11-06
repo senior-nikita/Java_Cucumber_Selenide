@@ -5,6 +5,6 @@ I use these instruments & frameworks:
  - Selenide;
  - JUnit;
  - Allure.
- - 
+
 Subject of testing is web application: **1forge.com**.
 This app provides the Forex data.
