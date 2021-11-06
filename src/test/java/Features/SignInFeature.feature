@@ -1,12 +1,11 @@
 Feature: SignInFeature
   Try to sign in with various credentials
 
-  Scenario Outline: Sign in with correct credentials
-    Given open page "https://imgur.com/"
-    When  click "Sign in" link-button on Main page
+  Scenario Outline: Sign in by username
+    Given page "https://imgur.com/" is open
+    When  I click "Sign in" link-button on Main page
     Then  current URL is: "https://imgur.com/signin?redirect=%2F"
-    When  enter username "<username>" and password "<pass>"
-    And   click "Sign In" button on SignIn page
+    When  I sign in with username "<username>" and password "<pass>"
     Then  current URL is: "https://imgur.com/"
     And   username "<username_displayed>" is displayed
 
