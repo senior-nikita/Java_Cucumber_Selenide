@@ -1,8 +1,10 @@
 package Steps;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import io.cucumber.java.Before;
 import dataProviders.ConfigFileReader;
+import io.cucumber.java.After;
 
 import static com.codeborne.selenide.Selenide.open;
 
@@ -22,5 +24,10 @@ public class Hooks {
        Configuration.pageLoadStrategy = "eager";   //because main page is loading by WebDriver infinitely :(
        open("/");
        Configuration.pageLoadStrategy = "normal";  //return default value
+   }
+
+   @After("@UI")
+    public void removeCookies(){
+       Selenide.clearBrowserCookies();
    }
 }
