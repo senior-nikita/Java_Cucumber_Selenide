@@ -1,9 +1,10 @@
+@UI
 Feature: SignInFeature
   Try to sign in with various credentials
 
   Scenario Outline: Sign in by username
-    Given page "https://imgur.com/" is open
-    When  I click "Sign in" link-button on Main page
+#    Given page "https://imgur.com/" is open
+    Given  I click "Sign in" link-button on Main page
     Then  current URL is: "https://imgur.com/signin?redirect=%2F"
     When  I sign in with username "<username>" and password "<pass>"
     Then  current URL is: "https://imgur.com/"

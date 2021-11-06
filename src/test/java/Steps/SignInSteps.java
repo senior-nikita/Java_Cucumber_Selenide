@@ -14,14 +14,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class SignInSteps {
 
-    @Given("^page \"([^\"]*)\" is open$")
-    public void openPage(String url) {
-        Configuration.pageLoadStrategy = "eager";   //because main page is loading by WebDriver infinitely :(
-        open(url);
-        Configuration.pageLoadStrategy = "normal";  //return default value
-    }
-
-    @When("I click {string} link-button on Main page")
+    @Given("I click {string} link-button on Main page")
     public void clickButton(String buttonName) {
         MainPage.linkButtonClick(buttonName);
     }
