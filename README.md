@@ -6,5 +6,5 @@ I use these instruments & frameworks:
  - JUnit;
  - Allure.
 
-Subject of testing is web application: **1forge.com**.
-This app provides the Forex data.
+Subject of testing is web application: **imgur.com**.
+This app provides sharing and getting entertainment content
